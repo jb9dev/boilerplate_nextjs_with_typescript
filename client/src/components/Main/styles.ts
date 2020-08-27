@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-// import { colors } from 'styles/variables'
+import { colors } from 'styles/variables'
 
 export const Wrapper = styled.main`
   display: flex;
@@ -11,8 +11,8 @@ export const Wrapper = styled.main`
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #ffffff;
-  background-color: #06092b;
+  color: ${colors.light};
+  background-color: ${colors.primary};
 `
 
 export const Logo = styled.img`
