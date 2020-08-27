@@ -1,8 +1,24 @@
 import { AppProps } from 'next/app'
-import '../../styles/globals.css'
+import Head from 'next/head'
 
-const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />
+import GlobalStyles from 'styles/global'
+
+const App: React.FC<AppProps> = ({ Component, pageProps }) => {
+  return (
+    <>
+      <Head>
+        <title>React Avançado - Boilerplate</title>
+        <link rel="shortcut icon" href="/img/icon-512.png" />
+        <link rel="apple-touch-icon" href="/img/icon-512.png" />
+        <meta
+          name="description"
+          content="A simple project to work with React, Next, TypeScript and StyledComponents"
+        />
+      </Head>
+      <GlobalStyles />
+      <Component {...pageProps} />
+    </>
+  )
 }
 
-export default MyApp
+export default App
