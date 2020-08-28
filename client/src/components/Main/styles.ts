@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import { colors } from 'styles/variables'
-
 export const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
@@ -11,8 +9,8 @@ export const Wrapper = styled.main`
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: ${colors.light};
-  background-color: ${colors.primary};
+  color: #ffffff;
+  background-color: #06092b;
 `
 
 export const Logo = styled.img`
