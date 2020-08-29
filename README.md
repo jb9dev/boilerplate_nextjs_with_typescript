@@ -17,6 +17,15 @@ Basta abrir o terminal na sua máquina, acessar a pasta onde deseja criar o proj
 
 Para visualizar as mudanças feitas no código localmente, rode o comando `yarn dev` e acesse através do navegador o caminho `http://localhost:3000`.
 
+## Geração automática de componente
+
+Rode o comando `yarn generate <NomeDoComponente>` para gerar automaticamente um boilerplate de pasta e arquivos para a criação de um novo componente no padrão usado no projeto, sendo uma pasta com o nome do componente contendo:
+
+- o arquivo index.tsx, com a estrutura do componente em React
+- o arquivo stories.tsx, com a estrutura da documentação do storybook do componente
+- o arquivo styles.ts, com a estrutura de estilização usando o Styled Componentes
+- o arquivo test.tsx com a estrutura básica para criar os testes para o componente
+
 ## Visualizando Storybook
 
 É possível visualizar o Storybook localmente através do comando `yarn storybook` e ao final do processo você será redirecionado para o navegador no endereço `http://localhost:6006`, já com acesso à documentação dos componentes.
