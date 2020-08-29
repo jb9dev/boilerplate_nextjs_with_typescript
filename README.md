@@ -1,30 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Boilerplate Nextjs com TypeScript
 
-## Getting Started
+Este repositório foi criado a partir do curso de React Avançado do Willian Justen na Udemy. O objetivo deste repositório é servir como template para a criação de novos projetos usando essa stack. Neste projeto estão incluídas as tecnologias a seguir:
 
-First, run the development server:
+- Nextjs
+- TypeScript
+- Testes com Jest e verificação de cobertura
+- Configurações de padrão de código com Eslint e Prettier
+- Documentação de componentes com Storybook
+- Configuração para PWA
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Como usar esse repositório como template para novas aplicações
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Basta abrir o terminal na sua máquina, acessar a pasta onde deseja criar o projeto, usar o comando `yarn create next-app -e https://github.com/jb9dev/boilerplate_nextjs_with_typescript` e aguardar o promp solicitar o nome do projeto que deseja criar. Na sequência o projeto será criado usando todas as configurações aqui já definidas. Ao final da criação e configuração, rode o comando `yarn`, para que as dependências sejam instaladas.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Rodando o projeto localmente
 
-## Learn More
+Para visualizar as mudanças feitas no código localmente, rode o comando `yarn dev` e acesse através do navegador o caminho `http://localhost:3000`.
 
-To learn more about Next.js, take a look at the following resources:
+## Visualizando Storybook
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+É possível visualizar o Storybook localmente através do comando `yarn storybook` e ao final do processo você será redirecionado para o navegador no endereço `http://localhost:6006`, já com acesso à documentação dos componentes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Também é possível disponibilizar o Storybook online em qualquer hospedagem de arquivos estáticos, para isso rode o comando `yarn build-storybook`. No final do processo será gerada a parta `storybook-static`. Basta subir os arquivos dessa pasta na sua hospedagem, que será possível visualizar a mesma documentação, sendo que online.
 
-## Deploy on Vercel
+## Rodando os testes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Para verificar se todos os testes estão passando, basta rodar o comando `yarn test`. Caso queira que os testes continuem rodando à cada alteração no código, ative a funcionalidade de _watch_ através do comando `yarn test:watch`. A cada nova rodada de testes é gerado o percentual de cobertura dos testes da aplicação. Também é gerado o snapshot para os componentes que o estiverem utilizando.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Build do projeto
+
+É possível realizar o build do projeto para verificação em ambiente de desenvolvimento, apenas para se certificar que está tudo conforme esperado. Para isso rode o comando `yarn build:dev` e ao final do processo rode o comando `yarn start` e acesse o endereço `http://localhost:3000` no seu navegador, para visualizar a aplicação como ficará em ambiente de produção.
+
+Para realizar o build do projeto para produção, rode o comando `yarn build:prod`. Ao final do processo será gerada a pasta .next com os arquivos para subir a aplicação online.
